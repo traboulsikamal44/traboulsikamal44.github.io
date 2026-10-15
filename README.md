@@ -1,7 +1,7 @@
-# Serenza — public pages
+# Wycliffe Partners Limited — public pages
 
-Public GitHub Pages site for Serenza, a trading name of Wycliffe Partners Limited
-(registered in England and Wales, company number 17268600).
+Public GitHub Pages site for Wycliffe Partners Limited (registered in England
+and Wales, company number 17268600).
 
 ## gemstone-cascade/
 
@@ -19,15 +19,18 @@ point at these exact URLs.
 
 ## Naming
 
-Two names, two jobs, and they are not interchangeable:
+**One name. M. Traboulsi, 15 October 2026: "WYCLIFFE PARTNERS LIMITED, PUT IT
+EVERYWHERE."**
 
-- **Serenza** — the studio byline. "Developed and published by Serenza."
-- **Wycliffe Partners Limited** — the legal entity. Copyright, licence grant,
-  liability, registered office.
+**Wycliffe Partners Limited** is the byline, the publisher and the legal entity
+alike — marketing copy, copyright, licence grant, liability and registered
+office. It is the name the business is verified under.
 
-Every legal page carries the tie: *Serenza is a trading name of Wycliffe
-Partners Limited.* "Ludicrous Studio" was a working-directory folder name and
-appears nowhere.
+What this replaced: until 15 October the site ran a two-name structure, with
+*Serenza* as the studio byline and Wycliffe Partners Limited as the legal entity
+underneath, tied by a line on every legal page. That is retired and Serenza
+appears nowhere. "Ludicrous Studio" was a working-directory folder name that had
+leaked into the root page's title and heading; it is gone too.
 
 ## Keeping this in step with the app
 

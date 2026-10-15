@@ -3,198 +3,112 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Gemstone Rhapsody</title>
-<meta name="description" content="A merge puzzle set in an opera house. Drop gems, merge matching pairs, and every merge strikes a real orchestral note.">
-<meta property="og:title" content="Gemstone Rhapsody">
-<meta property="og:description" content="A merge puzzle set in an opera house. Every merge strikes a real orchestral note.">
+<title>Gemstone Rhapsody — a merge puzzle in a ruined opera house</title>
+<meta name="description" content="Merge gems, clear the board, keep what you earn. Every stage you clear puts a piece of a burnt opera house back. An iPhone merge puzzle by Wycliffe Partners Limited.">
+<link rel="icon" href="./icon-256.png">
 <meta property="og:type" content="website">
+<meta property="og:title" content="Gemstone Rhapsody">
+<meta property="og:description" content="Merge gems, clear the board, keep what you earn. Every stage you clear puts a piece of a burnt opera house back.">
+<meta property="og:image" content="https://traboulsikamal44.github.io/gemstone-cascade/og-banner.png">
 <meta property="og:url" content="https://traboulsikamal44.github.io/gemstone-cascade/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Gemstone Rhapsody">
+<meta name="twitter:description" content="Merge gems, clear the board, keep what you earn. Every stage you clear puts a piece of a burnt opera house back.">
+<meta name="twitter:image" content="https://traboulsikamal44.github.io/gemstone-cascade/og-banner.png">
 <style>
-  :root {
-    --night:#0A0E14;
-    --ivory:#F2EBDC;
-    --ivory-soft:#BFB6A4;
-    --gold:#C9A227;
-    --gold-soft:#8A7326;
-    --rule:#2A2E36;
+  :root{
+    --ink:#f3e4c8; --dim:#c9ad86; --gold:#d8aa52;
+    --ground:#2d0a14; --deep:#1d060d;
+    --rule:rgba(216,170,82,.28); --card:rgba(255,255,255,.035);
   }
-  * { box-sizing:border-box; }
-  html { -webkit-text-size-adjust:100%; }
-  body {
-    margin:0;
-    background:var(--night);
-    color:var(--ivory);
-    font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
-    font-size:17px;
-    line-height:1.65;
-    -webkit-font-smoothing:antialiased;
-  }
-  .wrap { max-width:720px; margin:0 auto; padding:0 24px; }
-
-  header { padding:88px 0 56px; text-align:center; }
-  .mark {
-    font-size:11px; letter-spacing:0.34em; text-transform:uppercase;
-    color:var(--gold); margin-bottom:26px;
-  }
-  h1 {
-    font-size:clamp(38px, 9vw, 62px);
-    line-height:1.06;
-    margin:0 0 22px;
-    font-weight:normal;
-    letter-spacing:-0.015em;
-  }
-  .lede {
-    font-size:clamp(18px, 3.6vw, 21px);
-    color:var(--ivory-soft);
-    margin:0 auto;
-    max-width:30em;
-  }
-
-  .rule {
-    border:0; height:1px; background:var(--rule);
-    margin:56px 0;
-  }
-  .rule-gold {
-    border:0; height:0;
-    border-top:1px solid var(--gold-soft);
-    border-bottom:1px solid var(--gold-soft);
-    padding-top:2px;
-    margin:0 auto 8px;
-    width:78px;
-  }
-
-  section { padding:8px 0 12px; }
-  h2 {
-    font-size:12px; letter-spacing:0.2em; text-transform:uppercase;
-    color:var(--gold); margin:0 0 18px; font-weight:normal;
-  }
-  p { margin:0 0 18px; }
-  p:last-child { margin-bottom:0; }
-
-  ul.plain { list-style:none; margin:0; padding:0; }
-  ul.plain li {
-    padding:13px 0;
-    border-bottom:1px solid var(--rule);
-    color:var(--ivory-soft);
-  }
-  ul.plain li:last-child { border-bottom:none; }
-  ul.plain b { color:var(--ivory); font-weight:normal; }
-
-  .status {
-    text-align:center;
-    border:1px solid var(--gold-soft);
-    padding:26px 22px;
-    margin:8px 0 0;
-  }
-  .status .line {
-    font-size:11px; letter-spacing:0.28em; text-transform:uppercase;
-    color:var(--gold);
-  }
-  .status p { margin:12px 0 0; color:var(--ivory-soft); }
-
-  nav.links { display:flex; flex-wrap:wrap; gap:10px 28px; justify-content:center; }
-  nav.links a {
-    color:var(--ivory); text-decoration:none;
-    border-bottom:1px solid var(--gold-soft);
-    padding-bottom:2px;
-  }
-  nav.links a:hover, nav.links a:focus { color:var(--gold); border-bottom-color:var(--gold); }
-
-  a.mail { color:var(--ivory); text-decoration:none; border-bottom:1px solid var(--gold-soft); }
-  a.mail:hover { color:var(--gold); }
-
-  footer {
-    margin-top:56px; padding:34px 0 72px;
-    border-top:1px solid var(--rule);
-    text-align:center;
-    font-size:13px; line-height:1.75;
-    color:var(--ivory-soft);
-  }
-  footer .co { color:var(--ivory); }
-  footer .reg { font-size:12px; color:#7C7466; }
-
-  @media (max-width:520px) {
-    header { padding:64px 0 40px; }
-    .rule { margin:44px 0; }
-  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--deep);color:var(--ink);
+       font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+       line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:760px;margin:0 auto;padding:0 16px}
+  header{background:var(--ground);border-bottom:1px solid var(--rule);
+         padding:56px 0 44px;text-align:center}
+  header img{width:124px;height:124px;border-radius:50%;display:block;margin:0 auto 22px}
+  h1{font-size:clamp(30px,6vw,46px);margin:0 0 10px;letter-spacing:.02em;
+     color:var(--gold);font-weight:600}
+  .lede{font-size:clamp(17px,3.2vw,20px);margin:0 auto;max-width:34em}
+  h2{font-size:14px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);
+     margin:48px 0 14px;font-weight:600}
+  p{margin:0 0 16px}
+  .note{color:var(--dim);font-size:15px}
+  .grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+  .card{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:18px 20px}
+  .card b{display:block;color:var(--gold);font-weight:600;margin-bottom:6px;font-size:16px}
+  .card span{font-size:15px}
+  .pull{border-left:3px solid var(--gold);padding:4px 0 4px 18px;margin:24px 0;font-size:18px}
+  footer{border-top:1px solid var(--rule);margin-top:56px;padding:28px 0 60px;
+         color:var(--dim);font-size:14px;text-align:center}
+  a{color:var(--gold)}
+  footer a{margin:0 6px;white-space:nowrap}
 </style>
 </head>
 <body>
 
-<div class="wrap">
-
-  <header>
-    <div class="mark">Serenza</div>
-    <hr class="rule-gold">
+<header>
+  <img src="./icon-256.png" alt="Gemstone Rhapsody">
+  <div class="wrap">
     <h1>Gemstone Rhapsody</h1>
-    <p class="lede">A merge puzzle set in an opera house. Drop gems, merge
-    matching pairs &mdash; and every merge strikes a real orchestral note.</p>
-  </header>
+    <p class="lede">Merge gems, clear the board, keep what you earn. An opera house to rebuild,
+       instruments to collect, a new city when you are ready.</p>
+  </div>
+</header>
 
-  <hr class="rule">
+<main class="wrap">
 
-  <section>
-    <h2>The game</h2>
-    <p>Gemstone Rhapsody turns the classic merge puzzle into a night at the
-    opera. Matching stones fuse into ever-rarer ones, climbing a ladder from
-    Ruby to the dazzling Polar Star &mdash; and the black diamond, the Enigma,
-    must be broken before the finale is yours.</p>
-    <p>Every run earns Notes, and Notes restore a gilded concert hall of
-    hand-illustrated instruments and treasures. The hall begins dark. You light
-    it back up, room by room, as you play.</p>
-  </section>
+  <h2>What it is</h2>
+  <p>A merge puzzle for iPhone, set inside an opera house that burnt in 1945. Every run you play
+     rebuilds something.</p>
 
-  <hr class="rule">
+  <h2>How it plays</h2>
+  <p>Gems drop onto the stage. Two of the same kind touch and become one bigger stone, climbing
+     from Ruby up to the Mega Diamond. Every gem carries a number of seconds on its face: merge it
+     yourself and it adds them, let it fall and it takes them away. Let a stone cross the danger
+     line and the run is over.</p>
+  <p>Underneath the ordinary stones sits the Enigma, a black diamond that will not merge with
+     anything. You break it by landing gems against it, and when it goes the Polar Star rises.</p>
 
-  <section>
-    <h2>What it is</h2>
-    <ul class="plain">
-      <li><b>Easy to learn, with endless depth.</b> One tap drops a gem. The
-      difficulty is in where.</li>
-      <li><b>A living Conservatory to restore.</b> Earned by playing, never
-      sold.</li>
-      <li><b>A classical soundtrack that drives every performance.</b> The music
-      is the game, not the wallpaper.</li>
-      <li><b>Free to play</b>, with optional in-app purchases. Nothing is ever
-      required to buy.</li>
-    </ul>
-  </section>
+  <h2>What the playing pays for</h2>
+  <p>Clearing a stage puts one piece of the house back. The floor first, then the front stalls,
+     the curtain, the chandelier — twenty pieces in all, and the restoration screen names the next
+     one before you have earned it.</p>
+  <p class="pull">The house is rebuilt by playing and by nothing else. None of it is for sale.</p>
+  <p>Eighty stages in Vienna, each with its own task: a score to beat, a chain to hold, a stone to
+     forge, a minute to survive. More cities wait beyond Vienna.</p>
 
-  <hr class="rule">
+  <h2>Also in the house</h2>
+  <div class="grid">
+    <div class="card"><b>The Daily Challenge</b><span>A new board every day. One board, the whole
+      world, one run.</span></div>
+    <div class="card"><b>Notes</b><span>Earned as you play and spent on boosters and continues.
+      Everything Notes can buy, you can also earn by playing.</span></div>
+    <div class="card"><b>Elisabeth</b><span>The costumier, digging her burnt workroom out of the
+      rubble by lamplight. Her first line is &ldquo;Come and dig with me.&rdquo;</span></div>
+    <div class="card"><b>The soundtrack</b><span>Played to a classical soundtrack, under the board,
+      for as long as the run lasts.</span></div>
+  </div>
 
-  <section>
-    <div class="status">
-      <div class="line">Coming to the App Store</div>
-      <p>For iPhone and iPad.</p>
-    </div>
-  </section>
+  <h2>Clips</h2>
+  <p>New clips every week on
+     <a href="https://youtube.com/@gemstone.rhapsody">YouTube</a>,
+     <a href="https://tiktok.com/@gemstone.rhapsody">TikTok</a> and
+     <a href="https://x.com/gems_rhapsody">X</a>.</p>
 
-  <hr class="rule">
+  <p class="note">Free to play, with optional in-app purchases. Rated 4+.</p>
 
-  <section>
-    <h2>Support and legal</h2>
-    <nav class="links">
-      <a href="support.html">Support</a>
-      <a href="privacy-policy.html">Privacy Policy</a>
-      <a href="terms.html">Terms &amp; Conditions</a>
-    </nav>
-  </section>
+</main>
 
-  <hr class="rule">
-
-  <section style="text-align:center">
-    <h2>Contact</h2>
-    <p><a class="mail" href="mailto:traboulsikamal@mac.com">traboulsikamal@mac.com</a></p>
-  </section>
-
-  <footer>
-    <div class="co">&copy; 2026 Wycliffe Partners Limited. All rights reserved.</div>
-    <div class="reg">Serenza is a trading name of Wycliffe Partners Limited,<br>
-    registered in England and Wales, company number 17268600.<br>
-    Registered office: 71&ndash;75 Shelton Street, Covent Garden, London WC2H 9JQ, United Kingdom.</div>
-  </footer>
-
-</div>
+<footer class="wrap">
+  <a href="./support.html">Support</a>·
+  <a href="./privacy-policy.html">Privacy Policy</a>·
+  <a href="./terms.html">Terms &amp; Conditions</a>
+  <p class="note" style="margin-top:14px">&copy; 2026 Wycliffe Partners Limited. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
